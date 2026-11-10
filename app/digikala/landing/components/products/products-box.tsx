@@ -20,13 +20,13 @@ export default function ProductsBox({
   return (
     <div className="rounded-2xl border pb-7">
       {/* Head */}
-      <div className="flex justify-between pr-7 pl-6 py-5">
+      <div className="flex justify-between py-4 pr-5 pl-4">
         {/* Title */}
         <div>
           <div>
             <span className="text-[20px] font-bold">{title}</span>
           </div>
-          <div>
+          <div className="pt-2 f-14 text-neutral-500">
             <span>{subtitle}</span>
           </div>
         </div>
@@ -34,9 +34,9 @@ export default function ProductsBox({
         {/* More */}
         <div>
           <Link href={moreLink}>
-            <Button variant="secondary" className="rounded-md">
+            <Button variant="secondary" className="t-body-2 rounded-md">
               مشاهده همه
-              <ChevronLeftIcon />
+              <ChevronLeftIcon className="size-3"/>
             </Button>
           </Link>
         </div>
@@ -44,7 +44,7 @@ export default function ProductsBox({
 
       {/* Products */}
       <Products items={items} border={true}>
-        <div className="pr-5"></div>
+        <div className="pr-3"></div>
       </Products>
     </div>
   )

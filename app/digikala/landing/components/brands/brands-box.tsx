@@ -27,15 +27,6 @@ export function BrandsBox({
           </div>
         </div>
 
-        {/* More */}
-        <div>
-          <Link href={moreLink}>
-            <Button variant="secondary" className="rounded-md">
-              مشاهده همه
-              <ChevronLeftIcon />
-            </Button>
-          </Link>
-        </div>
       </div>
 
       {/* Products */}

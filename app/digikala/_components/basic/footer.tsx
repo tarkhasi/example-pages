@@ -51,10 +51,11 @@ export default function Footer({}) {
           {/* Actions */}
           <div className="flex">
             <Button
-              className="rounded-md bg-transparent py-5 text-mauve-400"
+              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+              className="t-body-2 rounded-md bg-transparent px-4 py-5 font-bold text-mauve-400"
               variant="outline"
             >
-              <span>بازگشت به بالا</span>
+              <span>بازگشت به بالا</span>&nbsp;
               <ChevronUpIcon />
             </Button>
           </div>
@@ -306,7 +307,7 @@ export default function Footer({}) {
         </div>
         {/* Download App */}
         <div
-          className="mb-7 flex items-center justify-between rounded-lg p-5"
+          className="mt-6 mb-7 flex items-center justify-between rounded-lg p-5"
           style={{ background: "#3c4b6d" }}
         >
           <div className="flex items-center gap-3">
@@ -467,7 +468,7 @@ export default function Footer({}) {
                 alt={i.name}
                 width={i.width ?? 124}
                 height={i.height ?? 20}
-                className="object-contain h-5"
+                className="h-5 object-contain"
               />
             </Link>
           ))}

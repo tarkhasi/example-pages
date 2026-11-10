@@ -5,7 +5,7 @@ const productsMobiles = [
     id: "p-mobile-1",
     image:
       "/img/digikala/products/c7d45684363f18714263c6e1c2eb02ac03f85333_1793520838.webp",
-    name: "گوشی موبایل آنر مدل 600 Lite دو سیم‌کارت ظرفیت 256...",
+    name: "گوشی موبایل آنر مدل 600 Lite دو سیم‌کارت ظرفیت 256",
     discount: "",
     price_with_discount: "",
     price: "۱۱۱,۸۸۰,۰۰۰",
@@ -14,7 +14,7 @@ const productsMobiles = [
     id: "p-mobile-2",
     image:
       "/img/digikala/products/3b15e1f3d948a5b12103a4faf9d3bfe8a3d0a48e_1767796426.webp",
-    name: "گوشی موبایل آنر مدل 600 Lite دو سیم‌کارت ظرفیت 256...",
+    name: "گوشی موبایل آنر مدل 600 Lite دو سیم‌کارت ظرفیت 256",
     discount: "",
     price_with_discount: "",
     price: "۱۱۸,۸۸۰,۰۰۰",
@@ -23,7 +23,7 @@ const productsMobiles = [
     id: "p-mobile-3",
     image:
       "/img/digikala/products/8ecf0fce5b38abf901a73e816e5107e2d01bfb7c_1790769104.webp",
-    name: "گوشی موبایل آنر مدل 600 Lite دو سیم‌کارت ظرفیت 256...",
+    name: "گوشی موبایل آنر مدل 600 Lite دو سیم‌کارت ظرفیت 256",
     discount: "۱۱",
     price_with_discount: "۱۸۸,۸۸۰,۰۰۰",
     price: "۱۱۸,۸۸۰,۰۰۰",
@@ -32,7 +32,7 @@ const productsMobiles = [
     id: "p-mobile-4",
     image:
       "/img/digikala/products/0a8fff942ea8ee0359edadad85daae399b0e357c_1763462145.webp",
-    name: "گوشی موبایل آنر مدل 600 Lite دو سیم‌کارت ظرفیت 256...",
+    name: "گوشی موبایل آنر مدل 600 Lite دو سیم‌کارت ظرفیت 256",
     discount: "۱۱",
     price_with_discount: "۱۸۸,۸۸۰,۰۰۰",
     price: "۱۱۸,۸۸۰,۰۰۰",
@@ -41,7 +41,7 @@ const productsMobiles = [
     id: "p-mobile-5",
     image:
       "/img/digikala/products/d7c815ba7a380a374408c22b6b31e66be3b41592_1791357490.webp",
-    name: "گوشی موبایل آنر مدل 600 Lite دو سیم‌کارت ظرفیت 256...",
+    name: "گوشی موبایل آنر مدل 600 Lite دو سیم‌کارت ظرفیت 256",
     discount: "۱۱",
     price_with_discount: "۱۸۸,۸۸۰,۰۰۰",
     price: "۱۱۸,۸۸۰,۰۰۰",
@@ -50,7 +50,7 @@ const productsMobiles = [
     id: "p-mobile-6",
     image:
       "/img/digikala/products/c7d45684363f18714263c6e1c2eb02ac03f85333_1793520838.webp",
-    name: "گوشی موبایل آنر مدل 600 Lite دو سیم‌کارت ظرفیت 256...",
+    name: "گوشی موبایل آنر مدل 600 Lite دو سیم‌کارت ظرفیت 256",
     discount: "",
     price_with_discount: "",
     price: "۱۱۱,۸۸۰,۰۰۰",
@@ -59,7 +59,7 @@ const productsMobiles = [
     id: "p-mobile-7",
     image:
       "/img/digikala/products/3b15e1f3d948a5b12103a4faf9d3bfe8a3d0a48e_1767796426.webp",
-    name: "گوشی موبایل آنر مدل 600 Lite دو سیم‌کارت ظرفیت 256...",
+    name: "گوشی موبایل آنر مدل 600 Lite دو سیم‌کارت ظرفیت 256",
     discount: "",
     price_with_discount: "",
     price: "۱۱۸,۸۸۰,۰۰۰",
@@ -68,7 +68,7 @@ const productsMobiles = [
     id: "p-mobile-8",
     image:
       "/img/digikala/products/8ecf0fce5b38abf901a73e816e5107e2d01bfb7c_1790769104.webp",
-    name: "گوشی موبایل آنر مدل 600 Lite دو سیم‌کارت ظرفیت 256...",
+    name: "گوشی موبایل آنر مدل 600 Lite دو سیم‌کارت ظرفیت 256",
     discount: "۱۱",
     price_with_discount: "۱۸۸,۸۸۰,۰۰۰",
     price: "۱۱۸,۸۸۰,۰۰۰",
@@ -77,7 +77,7 @@ const productsMobiles = [
     id: "p-mobile-9",
     image:
       "/img/digikala/products/0a8fff942ea8ee0359edadad85daae399b0e357c_1763462145.webp",
-    name: "گوشی موبایل آنر مدل 600 Lite دو سیم‌کارت ظرفیت 256...",
+    name: "گوشی موبایل آنر مدل 600 Lite دو سیم‌کارت ظرفیت 256",
     discount: "۱۱",
     price_with_discount: "۱۸۸,۸۸۰,۰۰۰",
     price: "۱۱۸,۸۸۰,۰۰۰",
@@ -86,7 +86,7 @@ const productsMobiles = [
     id: "p-mobile-10",
     image:
       "/img/digikala/products/d7c815ba7a380a374408c22b6b31e66be3b41592_1791357490.webp",
-    name: "گوشی موبایل آنر مدل 600 Lite دو سیم‌کارت ظرفیت 256...",
+    name: "گوشی موبایل آنر مدل 600 Lite دو سیم‌کارت ظرفیت 256",
     discount: "۱۱",
     price_with_discount: "۱۸۸,۸۸۰,۰۰۰",
     price: "۱۱۸,۸۸۰,۰۰۰",
@@ -98,36 +98,41 @@ const productsMobileItems = [
     id: "p-m-i-1",
     image:
       "/img/digikala/products/856515f5128ad6c5033d8d63ee853abd2bd53f44_1764755425.webp",
-    name: "کاور کی -زد دوو مدل Ares Sport مناسب برای... ",
+    name: "کاور کی -زد دوو مدل Ares Sport مناسب برای کاور کی -زد دوو مدل Ares Sport مناسب برای کاور کی -زد دوو مدل Ares Sport مناسب برای",
     discount: "",
     price_with_discount: "",
     price: "۱,۸۸۰,۰۰۰",
     special_offer: false,
+    stock: 2,
+    rating: 3.9,
   },
   {
     id: "d-m-i-2",
     image:
       "/img/digikala/products/77704b0e5e746cdb8fbb6ee8f60a24421789036f_1771718431.webp",
-    name: "کاور کی -زد دوو مدل Ares Sport مناسب برای... ",
+    name: "کاور کی -زد دوو مدل Ares Sport مناسب برای ",
     discount: "۸۸",
     price_with_discount: "۴۱۸,۰۰۰",
     price: "۵۰,۱۶۰",
     special_offer: true,
+    rating: 4.9,
   },
   {
     id: "d-m-i-3",
     image:
       "/img/digikala/products/5af1ad8e543f9d584bf4b358c63a7d96f0b5db8e_1782824003.webp",
-    name: "کاور کی -زد دوو مدل Ares Sport مناسب برای... ",
+    name: "کاور کی -زد دوو مدل Ares Sport مناسب برای ",
     discount: "۸۸",
     price_with_discount: "۴۱۸,۰۰۰",
     price: "۵۰,۱۶۰",
+    stock: 2,
+    rating: 3.9,
   },
   {
     id: "d-m-i-4",
     image:
       "/img/digikala/products/113560fda998ab7657040f6d4c04651b97c04634_1703172975.webp",
-    name: "کاور کی -زد دوو مدل Ares Sport مناسب برای... ",
+    name: "کاور کی -زد دوو مدل Ares Sport مناسب برای ",
     discount: "۸۸",
     price_with_discount: "۱,۷۰۰,۰۰۰",
     price: "۶۹۹,۰۰۰",
@@ -136,16 +141,17 @@ const productsMobileItems = [
     id: "d-m-i-5",
     image:
       "/img/digikala/products/5a6b05ec7afbff9e63a69a1a9c39e8837491f731_1761468551.webp",
-    name: "کاور کی -زد دوو مدل Ares Sport مناسب برای... ",
+    name: "کاور کی -زد دوو مدل Ares Sport مناسب برای ",
     discount: "۸۸",
     price_with_discount: "۱,۷۰۰,۰۰۰",
     price: "۶۹۹,۰۰۰",
+    rating: 3.9,
   },
   {
     id: "p-m-i-6",
     image:
       "/img/digikala/products/856515f5128ad6c5033d8d63ee853abd2bd53f44_1764755425.webp",
-    name: "کاور کی -زد دوو مدل Ares Sport مناسب برای... ",
+    name: "کاور کی -زد دوو مدل Ares Sport مناسب برای ",
     discount: "",
     price_with_discount: "",
     price: "۱,۸۸۰,۰۰۰",
@@ -154,7 +160,7 @@ const productsMobileItems = [
     id: "d-m-i-7",
     image:
       "/img/digikala/products/77704b0e5e746cdb8fbb6ee8f60a24421789036f_1771718431.webp",
-    name: "کاور کی -زد دوو مدل Ares Sport مناسب برای... ",
+    name: "کاور کی -زد دوو مدل Ares Sport مناسب برای ",
     discount: "۸۸",
     price_with_discount: "۴۱۸,۰۰۰",
     price: "۵۰,۱۶۰",
@@ -163,7 +169,7 @@ const productsMobileItems = [
     id: "d-m-i-8",
     image:
       "/img/digikala/products/5af1ad8e543f9d584bf4b358c63a7d96f0b5db8e_1782824003.webp",
-    name: "کاور کی -زد دوو مدل Ares Sport مناسب برای... ",
+    name: "کاور کی -زد دوو مدل Ares Sport مناسب برای ",
     discount: "۸۸",
     price_with_discount: "۴۱۸,۰۰۰",
     price: "۵۰,۱۶۰",
@@ -172,7 +178,7 @@ const productsMobileItems = [
     id: "d-m-i-9",
     image:
       "/img/digikala/products/113560fda998ab7657040f6d4c04651b97c04634_1703172975.webp",
-    name: "کاور کی -زد دوو مدل Ares Sport مناسب برای... ",
+    name: "کاور کی -زد دوو مدل Ares Sport مناسب برای ",
     discount: "۸۸",
     price_with_discount: "۱,۷۰۰,۰۰۰",
     price: "۶۹۹,۰۰۰",
@@ -181,7 +187,7 @@ const productsMobileItems = [
     id: "d-m-i-10",
     image:
       "/img/digikala/products/5a6b05ec7afbff9e63a69a1a9c39e8837491f731_1761468551.webp",
-    name: "کاور کی -زد دوو مدل Ares Sport مناسب برای... ",
+    name: "کاور کی -زد دوو مدل Ares Sport مناسب برای ",
     discount: "۸۸",
     price_with_discount: "۱,۷۰۰,۰۰۰",
     price: "۶۹۹,۰۰۰",
@@ -190,7 +196,7 @@ const productsMobileItems = [
     id: "d-m-i-11",
     image:
       "/img/digikala/products/4341168b14ce95e927fe92e99593e668db9f5739_1792325528.webp",
-    name: "هدفون بلوتوثی موزیک آپولو مدل REK-50...",
+    name: "هدفون بلوتوثی موزیک آپولو مدل REK-50",
     discount: "۸۸",
     price_with_discount: "۴۱۸,۰۰۰",
     price: "۵۰,۱۶۰",
@@ -208,7 +214,7 @@ const productsMobileItems = [
     id: "d-m-i-13",
     image:
       "/img/digikala/products/98bb110cefc58dcc0ed96eff8914c2bb3d48d318_1786533653.webp",
-    name: "هدفون بلوتوثی انکر مدل SoundCore R50i A3949 بدون ...",
+    name: "هدفون بلوتوثی انکر مدل SoundCore R50i A3949 بدون ",
     discount: "",
     price_with_discount: "",
     price: "۱,۱۵۰,۱۶۰",
@@ -217,7 +223,7 @@ const productsMobileItems = [
     id: "d-m-i-14",
     image:
       "/img/digikala/products/f0cc2b8d3d94b3256c2fd82437900fbe7461fc0d_1786571878.webp",
-    name: "هدفون بلوتوثی انکر مدل R50i NC با حذف نویز فعال ...",
+    name: "هدفون بلوتوثی انکر مدل R50i NC با حذف نویز فعال ",
     discount: "۸۸",
     price_with_discount: "۴۱۸,۰۰۰",
     price: "۵۰,۱۶۰",
@@ -226,7 +232,7 @@ const productsMobileItems = [
     id: "d-m-i-15",
     image:
       "/img/digikala/products/4341168b14ce95e927fe92e99593e668db9f5739_1792325528.webp",
-    name: "هدفون بلوتوثی موزیک آپولو مدل REK-50...",
+    name: "هدفون بلوتوثی موزیک آپولو مدل REK-50",
     discount: "۸۸",
     price_with_discount: "۴۱۸,۰۰۰",
     price: "۵۰,۱۶۰",
@@ -235,7 +241,7 @@ const productsMobileItems = [
     id: "d-m-i-16",
     image:
       "/img/digikala/products/f0cc2b8d3d94b3256c2fd82437900fbe7461fc0d_1786571878.webp",
-    name: "هدفون بلوتوثی انکر مدل R50i NC با حذف نویز فعال ...",
+    name: "هدفون بلوتوثی انکر مدل R50i NC با حذف نویز فعال ",
     discount: "۸۸",
     price_with_discount: "۴۱۸,۰۰۰",
     price: "۵۰,۱۶۰",
@@ -247,7 +253,7 @@ const productsCarItems = [
     id: "d-car-items-1",
     image:
       "/img/digikala/products/b38270cf9b678901d588b5837edba0b83f6725be_1774854519.webp",
-    name: "جامپ استارتر خودرو بیسوس مدل...",
+    name: "جامپ استارتر خودرو بیسوس مدل",
     discount: "۸۸",
     price_with_discount: "۴۱۸,۰۰۰",
     price: "۵۰,۱۶۰",
@@ -282,7 +288,7 @@ const productsCarItems = [
     id: "d-car-items-5",
     image:
       "/img/digikala/products/b38270cf9b678901d588b5837edba0b83f6725be_1774854519.webp",
-    name: "جامپ استارتر خودرو بیسوس مدل...",
+    name: "جامپ استارتر خودرو بیسوس مدل",
     discount: "۸۸",
     price_with_discount: "۴۱۸,۰۰۰",
     price: "۵۰,۱۶۰",
@@ -329,7 +335,7 @@ const productsSkin = [
     id: "d-skin-items-2",
     image:
       "/img/digikala/products/e50c784329c3786a59c1e0a0914e43c2695b3aed_1760871822.webp",
-    name: "کرم مرطوب کننده صورت و گردن کلامین مدل collagen bank ...",
+    name: "کرم مرطوب کننده صورت و گردن کلامین مدل collagen bank ",
     discount: "",
     price_with_discount: "",
     price: "۴۱۸,۰۰۰",
@@ -365,7 +371,7 @@ const productsSkin = [
     id: "d-skin-items-6",
     image:
       "/img/digikala/products/e50c784329c3786a59c1e0a0914e43c2695b3aed_1760871822.webp",
-    name: "کرم مرطوب کننده صورت و گردن کلامین مدل collagen bank ...",
+    name: "کرم مرطوب کننده صورت و گردن کلامین مدل collagen bank ",
     discount: "",
     price_with_discount: "",
     price: "۴۱۸,۰۰۰",
@@ -395,7 +401,7 @@ const productsHeadset = [
     id: "d-headset-items-1",
     image:
       "/img/digikala/products/4341168b14ce95e927fe92e99593e668db9f5739_1792325528.webp",
-    name: "هدفون بلوتوثی موزیک آپولو مدل REK-50...",
+    name: "هدفون بلوتوثی موزیک آپولو مدل REK-50",
     discount: "۸۸",
     price_with_discount: "۴۱۸,۰۰۰",
     price: "۵۰,۱۶۰",
@@ -413,7 +419,7 @@ const productsHeadset = [
     id: "d-headset-items-3",
     image:
       "/img/digikala/products/98bb110cefc58dcc0ed96eff8914c2bb3d48d318_1786533653.webp",
-    name: "هدفون بلوتوثی انکر مدل SoundCore R50i A3949 بدون ...",
+    name: "هدفون بلوتوثی انکر مدل SoundCore R50i A3949 بدون ",
     discount: "",
     price_with_discount: "",
     price: "۱,۱۵۰,۱۶۰",
@@ -422,7 +428,7 @@ const productsHeadset = [
     id: "d-headset-items-4",
     image:
       "/img/digikala/products/f0cc2b8d3d94b3256c2fd82437900fbe7461fc0d_1786571878.webp",
-    name: "هدفون بلوتوثی انکر مدل R50i NC با حذف نویز فعال ...",
+    name: "هدفون بلوتوثی انکر مدل R50i NC با حذف نویز فعال ",
     discount: "۸۸",
     price_with_discount: "۴۱۸,۰۰۰",
     price: "۵۰,۱۶۰",
@@ -431,7 +437,7 @@ const productsHeadset = [
     id: "d-headset-items-5",
     image:
       "/img/digikala/products/4341168b14ce95e927fe92e99593e668db9f5739_1792325528.webp",
-    name: "هدفون بلوتوثی موزیک آپولو مدل REK-50...",
+    name: "هدفون بلوتوثی موزیک آپولو مدل REK-50",
     discount: "۸۸",
     price_with_discount: "۴۱۸,۰۰۰",
     price: "۵۰,۱۶۰",
@@ -449,7 +455,7 @@ const productsHeadset = [
     id: "d-headset-items-7",
     image:
       "/img/digikala/products/98bb110cefc58dcc0ed96eff8914c2bb3d48d318_1786533653.webp",
-    name: "هدفون بلوتوثی انکر مدل SoundCore R50i A3949 بدون ...",
+    name: "هدفون بلوتوثی انکر مدل SoundCore R50i A3949 بدون ",
     discount: "",
     price_with_discount: "",
     price: "۱,۱۵۰,۱۶۰",
@@ -458,7 +464,7 @@ const productsHeadset = [
     id: "d-headset-items-8",
     image:
       "/img/digikala/products/f0cc2b8d3d94b3256c2fd82437900fbe7461fc0d_1786571878.webp",
-    name: "هدفون بلوتوثی انکر مدل R50i NC با حذف نویز فعال ...",
+    name: "هدفون بلوتوثی انکر مدل R50i NC با حذف نویز فعال ",
     discount: "۸۸",
     price_with_discount: "۴۱۸,۰۰۰",
     price: "۵۰,۱۶۰",
@@ -479,7 +485,7 @@ const products = [
     id: "d-p-2",
     image:
       "/img/digikala/products/aa9f2b1095f76625029079d56d6746ddaec11998_1784810442.webp",
-    name: "سرم آبرسان بعد از اصلاح صورت آقایان تیلسیم...",
+    name: "سرم آبرسان بعد از اصلاح صورت آقایان تیلسیم",
     discount: "۸۰",
     price_with_discount: "۱,۷۰۰,۰۰۰",
     price: "۳۳۹,۰۰۰",
@@ -497,7 +503,7 @@ const products = [
     id: "d-p-4",
     image:
       "/img/digikala/products/aa9f2b1095f76625029079d56d6746ddaec11998_1784810442.webp",
-    name: "سرم آبرسان بعد از اصلاح صورت آقایان تیلسیم...",
+    name: "سرم آبرسان بعد از اصلاح صورت آقایان تیلسیم",
     discount: "۸۰",
     price_with_discount: "۱,۷۰۰,۰۰۰",
     price: "۳۳۹,۰۰۰",
@@ -506,7 +512,7 @@ const products = [
     id: "d-p-5",
     image:
       "/img/digikala/products/52cd0a1a4efc75857760e1cce30d114692e4b946_1769210160.webp",
-    name: "عینک محافظ  چشم مدل TR31-Anti ...",
+    name: "عینک محافظ  چشم مدل TR31-Anti ",
     discount: "۷۷",
     price_with_discount: "۳,۰۰۰,۰۰۰",
     price: "۶۹۹,۰۰۰",
@@ -524,7 +530,7 @@ const products = [
     id: "d-p-7",
     image:
       "/img/digikala/products/aa9f2b1095f76625029079d56d6746ddaec11998_1784810442.webp",
-    name: "سرم آبرسان بعد از اصلاح صورت آقایان تیلسیم...",
+    name: "سرم آبرسان بعد از اصلاح صورت آقایان تیلسیم",
     discount: "۸۰",
     price_with_discount: "۱,۷۰۰,۰۰۰",
     price: "۳۳۹,۰۰۰",
@@ -542,7 +548,7 @@ const products = [
     id: "d-p-9",
     image:
       "/img/digikala/products/aa9f2b1095f76625029079d56d6746ddaec11998_1784810442.webp",
-    name: "سرم آبرسان بعد از اصلاح صورت آقایان تیلسیم...",
+    name: "سرم آبرسان بعد از اصلاح صورت آقایان تیلسیم",
     discount: "۸۰",
     price_with_discount: "۱,۷۰۰,۰۰۰",
     price: "۳۳۹,۰۰۰",
@@ -551,7 +557,7 @@ const products = [
     id: "d-p-10",
     image:
       "/img/digikala/products/52cd0a1a4efc75857760e1cce30d114692e4b946_1769210160.webp",
-    name: "عینک محافظ  چشم مدل TR31-Anti ...",
+    name: "عینک محافظ  چشم مدل TR31-Anti ",
     discount: "۷۷",
     price_with_discount: "۳,۰۰۰,۰۰۰",
     price: "۶۹۹,۰۰۰",

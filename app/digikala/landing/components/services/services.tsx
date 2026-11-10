@@ -3,8 +3,7 @@
 import * as React from "react"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import { EllipsisIcon  } from "lucide-react"
-import { items } from "@/app/digikala/_data/services.data"
+import { EllipsisIcon } from "lucide-react"
 import Link from "next/link"
 
 export default function Services({

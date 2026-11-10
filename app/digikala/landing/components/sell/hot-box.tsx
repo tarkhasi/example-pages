@@ -3,6 +3,7 @@
 import * as React from "react"
 import { FlameIcon } from "lucide-react"
 import Image from "next/image"
+import { toPersianNumber } from "@/lib/utils"
 
 export function HotBox({ items, title }: { items: any, title:string }) {
 
@@ -42,9 +43,9 @@ export function HotBox({ items, title }: { items: any, title:string }) {
                 className="object-contain"
               />
 
-              <div className="pr-3">
+              <div className="t-body-2 line-clamp-2 pr-3">
                 <span className="inline-flex h-5.5 w-5.5 items-center justify-center rounded-full bg-red-500 align-middle text-white">
-                  {index + 1}
+                  {toPersianNumber(index + 1)}
                 </span>
                 <span>&nbsp;&nbsp;{i?.name}</span>
               </div>

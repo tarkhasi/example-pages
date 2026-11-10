@@ -15,7 +15,7 @@ import {
   productsMobileItems,
   productsMobiles,
   productsSkin,
-} from "@/app/digikala/_data/items.data"
+} from "@/app/digikala/_data/products.data"
 import { BrandsBox } from "@/app/digikala/landing/components/brands/brands-box"
 import { HotBox } from "@/app/digikala/landing/components/sell/hot-box"
 import Products from "@/app/digikala/landing/components/products/products"
@@ -31,6 +31,9 @@ import {
 } from "@/app/digikala/_data/banner.data"
 import Express from "@/app/digikala/landing/components/products/express"
 import { services } from "@/app/digikala/_data/services.data"
+import { categories } from "@/app/digikala/_data/categories.data"
+import HeroSlider from "@/app/digikala/landing/components/slider/hero-slider"
+import Space from "@/components/space"
 
 export default function Page() {
   return (
@@ -39,20 +42,13 @@ export default function Page() {
       <Header />
 
       {/* Slider */}
-      <div className="shrink-0 ease-linear">
-        <Image
-          src="/img/digikala/slider/slider-1.webp"
-          alt="Slider One"
-          width={2880}
-          height={900}
-          className="h-auto w-full"
-        />
-      </div>
+      <HeroSlider/>
 
       {/* Main */}
       <main className={styles.main}>
         {/* Pages and Services */}
         <Services items={services} />
+        <Space height={22} />
 
         {/* Discounts and Sell */}
         <AmazingDiscount items={products} />
@@ -71,7 +67,7 @@ export default function Page() {
 
         {/*  Categories */}
         <div className="py-6">
-          <Categories />
+          <Categories items={categories} />
         </div>
 
         {/*  Cards 3 */}
@@ -157,7 +153,7 @@ export default function Page() {
         </div>
 
         {/* Suggested */}
-        <div className="pb-6">
+        <div className="  pb-16">
           <div className="py-3 text-[20px] font-bold">
             <span>پیشنهاد ما</span>
           </div>

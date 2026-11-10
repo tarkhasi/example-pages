@@ -14,19 +14,19 @@ export default function Brands({
   const list = items.map((i: any) => (
     <div
       key={i?.id}
-      className="overflow-hidden rounded-md border text-center pb-2"
+      className="overflow-hidden rounded-md border border-neutral-200! pb-2  text-center"
       style={{ minWidth: "90px", width: "90px" }}
     >
-      <Box width={90} height={90} className="flex items-center justify-center">
+      <Box width={90} height={90} className="flex items-center justify-center px-1">
         <Image
           src={i?.image}
           alt={i?.name}
           width="90"
           height="90"
-          className="object-contain"
+          className="object-contain w-auto"
         />
       </Box>
-      <div >{i?.name}</div>
+      <div className="f-12 font-bold text-neutral-600">{i?.name}</div>
     </div>
   ))
   return (

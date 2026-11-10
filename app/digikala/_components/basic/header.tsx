@@ -1,25 +1,61 @@
 "use client"
 
-import { Field } from "@/components/ui/field"
-
-import { InputGroup, InputGroupAddon, InputGroupInput, InputGroupText, } from "@/components/ui/input-group"
-import { LogIn, MapPinIcon, MenuIcon, SearchIcon } from "lucide-react"
-import Image from "next/image"
-import { Separator } from "@/components/ui/separator"
 import * as React from "react"
-import styles from "@/app/digikala/landing/landing.module.css"
+import Image from "next/image"
+import Link from "next/link"
+
+import { Field } from "@/components/ui/field"
+import {
+  InputGroup,
+  InputGroupAddon,
+  InputGroupInput,
+  InputGroupText,
+} from "@/components/ui/input-group"
+
+import { Separator } from "@/components/ui/separator"
 import { Button } from "@/components/ui/button"
 import Space from "@/components/space"
-import Link from "next/link"
-import { brands } from "@/app/digikala/_data/footer.data"
+
+import { LogIn, MapPinIcon, MenuIcon, SearchIcon } from "lucide-react"
+
+import styles from "@/app/digikala/landing/landing.module.css"
 import { menu } from "@/app/digikala/_data/header.data"
 
-export default function Header({}) {
+export default function Header() {
+  const [isMenuVisible, setIsMenuVisible] = React.useState(true)
+
+  React.useEffect(() => {
+    let lastScrollY = window.scrollY
+
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY
+
+      if (currentScrollY < 50) {
+        setIsMenuVisible(true)
+      } else if (currentScrollY > lastScrollY + 5) {
+        setIsMenuVisible(false)
+      } else if (currentScrollY < lastScrollY - 5) {
+        setIsMenuVisible(true)
+      }
+
+      lastScrollY = currentScrollY
+    }
+
+    window.addEventListener("scroll", handleScroll, {
+      passive: true,
+    })
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll)
+    }
+  }, [])
+
   return (
-    <header className={"border"}>
+    <header className="sticky top-0 z-50 border-b bg-background">
       <div className={styles.header + " px-4 pt-1"}>
-        <div className="flex items-center justify-between gap-2 py-2">
-          {/* Logo & ... */}
+        {/* Main Header - Always Visible */}
+        <div className="flex items-center justify-between gap-2 py-2 pb-3">
+          {/* Logo & Search */}
           <div className="flex w-full items-center">
             <div>
               <Image
@@ -60,7 +96,7 @@ export default function Header({}) {
             <Button variant="link" size="icon">
               <Image
                 src="/img/digikala/icons/bell.svg"
-                alt="Lorem Ipsum"
+                alt="Notification"
                 width={24}
                 height={24}
               />
@@ -84,7 +120,7 @@ export default function Header({}) {
             <Button variant="link" size="icon">
               <Image
                 src="/img/digikala/icons/cart.svg"
-                alt="Lorem Ipsum"
+                alt="Cart"
                 width={24}
                 height={24}
               />
@@ -92,64 +128,81 @@ export default function Header({}) {
           </div>
         </div>
 
-        {/*  Menu */}
-        <div className="flex justify-between pt-1">
-          {/* Menu Items */}
-          <div className="text-body-2 flex items-center text-neutral-600">
-            <Link href="#" className="group relative">
-              <div className="text-body1-strong flex items-center pl-4 text-[14px] font-bold text-foreground">
-                <MenuIcon size={20} />
-                <span>&nbsp;</span>
-                <span>دسته‌بندی کالاها</span>
+        {/* Menu - Animated Hide / Show */}
+        <div
+          className={`grid transition-all duration-300 ease-in-out ${
+            isMenuVisible
+              ? "grid-rows-[1fr] opacity-100"
+              : "grid-rows-[0fr] opacity-0"
+          } `}
+        >
+          <div className="overflow-hidden">
+            <div className="flex justify-between pt-1">
+              {/* Menu Items */}
+              <div className="text-body-2 flex items-center text-neutral-600">
+                <Link href="#" className="group relative">
+                  <div className="text-body1-strong flex items-center pl-4 text-[14px] font-bold text-foreground">
+                    <MenuIcon size={20} />
+                    <span>&nbsp;</span>
+                    <span>دسته‌بندی کالاها</span>
+                  </div>
+
+                  <span className="absolute -bottom-2 left-0 h-0.5 w-0 rounded-t-2xl bg-red-500 transition-all duration-300 ease-in-out group-hover:w-full" />
+                </Link>
+
+                <Separator
+                  orientation="vertical"
+                  className="data-vertical:h-4 data-vertical:self-auto"
+                />
+
+                {/* Menu Loop */}
+                {menu.map((i) => (
+                  <Link
+                    key={i?.id}
+                    href={i?.link}
+                    className="group t-body-2 relative px-3"
+                  >
+                    <div className="flex items-center">
+                      <Image
+                        src={i?.image}
+                        alt={i?.alt}
+                        className="opacity-40"
+                        width={18}
+                        height={18}
+                      />
+
+                      <span className="pr-1">{i?.name}</span>
+                    </div>
+
+                    <span className="absolute -bottom-2 left-0 h-0.5 w-0 rounded-t-2xl bg-red-500 transition-all duration-300 ease-in-out group-hover:w-full" />
+                  </Link>
+                ))}
+
+                <Separator
+                  orientation="vertical"
+                  className="data-vertical:h-4 data-vertical:self-auto"
+                />
+
+                <Link href="#" className="group relative px-3">
+                  <div className="t-body-2 flex items-center">
+                    <span>در دیجی‌کالا بفروشید!</span>
+                  </div>
+
+                  <span className="absolute -bottom-2 left-0 h-0.5 w-0 rounded-t-2xl bg-red-500 transition-all duration-300 ease-in-out group-hover:w-full" />
+                </Link>
               </div>
-              <span className="absolute -bottom-2 left-0 h-0.5 w-0 rounded-t-2xl bg-red-500 transition-all duration-300 ease-in-out group-hover:w-full" />
-            </Link>
 
-            <Separator
-              orientation="vertical"
-              className="data-vertical:h-4 data-vertical:self-auto"
-            />
-
-            {/* Menu loop */}
-            {menu.map((i, index) => (
-              <Link key={i?.id} href={i?.link} className="group relative px-3">
-                <div className="flex items-center">
-                  <Image
-                    src={i?.image}
-                    alt={i?.alt}
-                    className="opacity-40"
-                    width={18}
-                    height={18}
-                  />
-                  <span className="pr-1">{i?.name}</span>
-                </div>
-
-                <span className="absolute -bottom-2 left-0 h-0.5 w-0 rounded-t-2xl bg-red-500 transition-all duration-300 ease-in-out group-hover:w-full" />
-              </Link>
-            ))}
-
-            <Separator
-              orientation="vertical"
-              className="data-vertical:h-4 data-vertical:self-auto"
-            />
-
-            <Link href="#" className="group relative px-3">
-              <div className="flex items-center">
-                <span>در دیجی‌کالا بفروشید!</span>
+              {/* Address Action */}
+              <div className="pb-1">
+                <Button
+                  variant="secondary"
+                  className="cursor-pointer bg-orange-50 f-12 text-orange-400"
+                >
+                  <MapPinIcon />
+                  <span>انتخاب آدرس</span>
+                </Button>
               </div>
-              <span className="absolute -bottom-2 left-0 h-0.5 w-0 rounded-t-2xl bg-red-500 transition-all duration-300 ease-in-out group-hover:w-full" />
-            </Link>
-          </div>
-
-          {/* Actions */}
-          <div className="pb-1">
-            <Button
-              variant="secondary"
-              className="f-12 cursor-pointer bg-orange-50 text-orange-400"
-            >
-              <MapPinIcon />
-              <span>انتخاب آدرس</span>
-            </Button>
+            </div>
           </div>
         </div>
       </div>

@@ -145,6 +145,6 @@ button{
 @utility f-* {
     font-size: calc(--value(integer) * 1px) !important;
 }
-.text-body-2 {
+.t-body-2 {
     font-size: 12px !important;
 }
