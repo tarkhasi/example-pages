@@ -2,12 +2,13 @@
 
 import { Button } from "@/components/ui/button"
 import styles from "./../../landing.module.css"
-import { ChevronLeftIcon } from "lucide-react"
+import { ChevronLeftIcon, ChevronRightIcon } from "lucide-react"
 import Image from "next/image"
 import * as React from "react"
 import { cn } from "@/lib/utils"
 import Products from "@/app/digikala/landing/components/products/products"
 import Box from "@/components/box"
+import HorizontalSlider from "@/components/horizontal-slider"
 
 const DEFAULT_DURATION = 15 * 3600 + 47 * 60 + 34
 
@@ -52,18 +53,6 @@ export default function AmazingDiscount({
   durationSeconds?: number
 }>) {
   const timer = useCountdown(durationSeconds)
-
-  const productsRef = React.useRef<HTMLDivElement>(null)
-
-  const handleNext = () => {
-    const container = productsRef.current
-    if (!container) return
-
-    container.scrollBy({
-      left: -container.clientWidth * 0.7,
-      behavior: "smooth",
-    })
-  }
 
   return (
     <div
@@ -115,22 +104,10 @@ export default function AmazingDiscount({
         </Button>
       </div>
 
-      {/* Sell Items */}
-      <div className="relative min-w-0 flex-1">
-        <Products items={items} gap={1} scrollRef={productsRef} />
-
-        {/* Next Button */}
-        <Button
-          type="button"
-          onClick={handleNext}
-          variant="outline"
-          size="icon"
-          className="absolute top-1/2 left-2 z-20 h-10 w-10 -translate-y-1/2 rounded-full bg-white shadow-md hover:bg-gray-100"
-          aria-label="محصولات بعدی"
-        >
-          <ChevronLeftIcon className="h-5 w-5" />
-        </Button>
-      </div>
+      {/* Products */}
+      <HorizontalSlider className="flex-1 rounded-r-xl overflow-hidden" dir="rtl" scrollAmount={0.7}>
+        <Products items={items} gap={1} />
+      </HorizontalSlider>
     </div>
   )
 }

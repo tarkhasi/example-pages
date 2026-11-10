@@ -24,21 +24,46 @@ import { menu } from "@/app/digikala/_data/header.data"
 export default function Header() {
   const [isMenuVisible, setIsMenuVisible] = React.useState(true)
 
+
   React.useEffect(() => {
     let lastScrollY = window.scrollY
+    let ticking = false
+    let accumulatedScroll = 0
+    let rafId = 0
+
+    const THRESHOLD = 100
+    const TOP_LIMIT = 50
 
     const handleScroll = () => {
-      const currentScrollY = window.scrollY
+      if (ticking) return
 
-      if (currentScrollY < 50) {
-        setIsMenuVisible(true)
-      } else if (currentScrollY > lastScrollY + 5) {
-        setIsMenuVisible(false)
-      } else if (currentScrollY < lastScrollY - 5) {
-        setIsMenuVisible(true)
-      }
+      ticking = true
 
-      lastScrollY = currentScrollY
+      rafId = window.requestAnimationFrame(() => {
+        const currentScrollY = window.scrollY
+        const difference = currentScrollY - lastScrollY
+
+        if (currentScrollY <= TOP_LIMIT) {
+          setIsMenuVisible(true)
+          accumulatedScroll = 0
+        } else {
+          accumulatedScroll =
+            difference > 0
+              ? Math.max(0, accumulatedScroll + difference)
+              : Math.min(0, accumulatedScroll + difference)
+
+          if (accumulatedScroll >= 100) {
+            setIsMenuVisible(false)
+            accumulatedScroll = 0
+          } else if (accumulatedScroll <= -100) {
+            setIsMenuVisible(true)
+            accumulatedScroll = 0
+          }
+        }
+
+        lastScrollY = currentScrollY
+        ticking = false
+      })
     }
 
     window.addEventListener("scroll", handleScroll, {
@@ -47,13 +72,14 @@ export default function Header() {
 
     return () => {
       window.removeEventListener("scroll", handleScroll)
+      window.cancelAnimationFrame(rafId)
     }
   }, [])
 
   return (
     <header className="sticky top-0 z-50 border-b bg-background">
       <div className={styles.header + " px-4 pt-1"}>
-        {/* Main Header - Always Visible */}
+        {/* Main Header */}
         <div className="flex items-center justify-between gap-2 py-2 pb-3">
           {/* Logo & Search */}
           <div className="flex w-full items-center">
@@ -63,6 +89,7 @@ export default function Header() {
                 alt="Logo"
                 width={195}
                 height={30}
+                priority
               />
             </div>
 
@@ -128,80 +155,80 @@ export default function Header() {
           </div>
         </div>
 
-        {/* Menu - Animated Hide / Show */}
+        {/* Menu */}
         <div
-          className={`grid transition-all duration-300 ease-in-out ${
+          className={`overflow-hidden transition-[max-height,opacity,transform] duration-400 ease-in-out ${
             isMenuVisible
-              ? "grid-rows-[1fr] opacity-100"
-              : "grid-rows-[0fr] opacity-0"
+              ? "max-h-16 translate-y-0 opacity-100"
+              : "max-h-0 -translate-y-2 opacity-0"
           } `}
+          style={{
+            willChange: "max-height, opacity, transform",
+          }}
         >
-          <div className="overflow-hidden">
-            <div className="flex justify-between pt-1">
-              {/* Menu Items */}
-              <div className="text-body-2 flex items-center text-neutral-600">
-                <Link href="#" className="group relative">
-                  <div className="text-body1-strong flex items-center pl-4 text-[14px] font-bold text-foreground">
-                    <MenuIcon size={20} />
-                    <span>&nbsp;</span>
-                    <span>دسته‌بندی کالاها</span>
-                  </div>
+          <div className="flex justify-between pt-1">
+            {/* Menu Items */}
+            <div className="text-body-2 flex items-center text-neutral-600">
+              <Link href="#" className="group relative">
+                <div className="text-body1-strong flex items-center pl-4 text-[14px] font-bold text-foreground">
+                  <MenuIcon size={20} />
+                  <span>&nbsp;</span>
+                  <span>دسته‌بندی کالاها</span>
+                </div>
 
-                  <span className="absolute -bottom-2 left-0 h-0.5 w-0 rounded-t-2xl bg-red-500 transition-all duration-300 ease-in-out group-hover:w-full" />
-                </Link>
+                <span className="absolute -bottom-2 left-0 h-0.5 w-0 rounded-t-2xl bg-red-500 transition-all duration-300 ease-in-out group-hover:w-full" />
+              </Link>
 
-                <Separator
-                  orientation="vertical"
-                  className="data-vertical:h-4 data-vertical:self-auto"
-                />
+              <Separator
+                orientation="vertical"
+                className="data-vertical:h-4 data-vertical:self-auto"
+              />
 
-                {/* Menu Loop */}
-                {menu.map((i) => (
-                  <Link
-                    key={i?.id}
-                    href={i?.link}
-                    className="group t-body-2 relative px-3"
-                  >
-                    <div className="flex items-center">
-                      <Image
-                        src={i?.image}
-                        alt={i?.alt}
-                        className="opacity-40"
-                        width={18}
-                        height={18}
-                      />
-
-                      <span className="pr-1">{i?.name}</span>
-                    </div>
-
-                    <span className="absolute -bottom-2 left-0 h-0.5 w-0 rounded-t-2xl bg-red-500 transition-all duration-300 ease-in-out group-hover:w-full" />
-                  </Link>
-                ))}
-
-                <Separator
-                  orientation="vertical"
-                  className="data-vertical:h-4 data-vertical:self-auto"
-                />
-
-                <Link href="#" className="group relative px-3">
-                  <div className="t-body-2 flex items-center">
-                    <span>در دیجی‌کالا بفروشید!</span>
-                  </div>
-
-                  <span className="absolute -bottom-2 left-0 h-0.5 w-0 rounded-t-2xl bg-red-500 transition-all duration-300 ease-in-out group-hover:w-full" />
-                </Link>
-              </div>
-
-              {/* Address Action */}
-              <div className="pb-1">
-                <Button
-                  variant="secondary"
-                  className="cursor-pointer bg-orange-50 f-12 text-orange-400"
+              {menu.map((i) => (
+                <Link
+                  key={i?.id}
+                  href={i?.link}
+                  className="group t-body-2 relative px-3"
                 >
-                  <MapPinIcon />
-                  <span>انتخاب آدرس</span>
-                </Button>
-              </div>
+                  <div className="flex items-center">
+                    <Image
+                      src={i?.image}
+                      alt={i?.alt}
+                      className="opacity-40"
+                      width={18}
+                      height={18}
+                    />
+
+                    <span className="pr-1">{i?.name}</span>
+                  </div>
+
+                  <span className="absolute -bottom-2 left-0 h-0.5 w-0 rounded-t-2xl bg-red-500 transition-all duration-300 ease-in-out group-hover:w-full" />
+                </Link>
+              ))}
+
+              <Separator
+                orientation="vertical"
+                className="data-vertical:h-4 data-vertical:self-auto"
+              />
+
+              <Link href="#" className="group relative px-3">
+                <div className="t-body-2 flex items-center">
+                  <span>در دیجی‌کالا بفروشید!</span>
+                </div>
+
+                <span className="absolute -bottom-2 left-0 h-0.5 w-0 rounded-t-2xl bg-red-500 transition-all duration-300 ease-in-out group-hover:w-full" />
+              </Link>
+            </div>
+
+            {/* Address Action */}
+            <div className="pb-1">
+              <Button
+                variant="secondary"
+                className="cursor-pointer bg-orange-50 f-12 text-orange-400"
+              >
+                <MapPinIcon />
+                <span>انتخاب آدرس</span>
+              </Button>
             </div>
           </div>
         </div>

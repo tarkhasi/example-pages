@@ -6,6 +6,8 @@ import Image from "next/image"
 import { ChevronLeftIcon, InfoIcon } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Products from "@/app/digikala/landing/components/products/products"
+import HorizontalSlider from "@/components/horizontal-slider"
+import { cn } from "@/lib/utils"
 
 export default function Express({
   items,
@@ -13,8 +15,8 @@ export default function Express({
   items: any
 }>) {
   return (
-    <div className={styles.express}>
-      <div className="px-6 pt-5 pb-3">
+    <div className={cn(styles.express, "pb-5")}>
+      <div className="pb-3 px-6 pt-5">
         {/* Express Header */}
         <div className="flex items-center gap-2 pb-2">
           <div>
@@ -44,10 +46,14 @@ export default function Express({
       </div>
 
       {/* Express Products */}
-      <div className="pb-5 opacity-25">
-        <Products items={items}>
-          <div className="pr-6"></div>
-        </Products>
+      <div className="pointer-events-none flex-1 opacity-50">
+        <HorizontalSlider
+          className="flex-1 overflow-hidden rounded-r-xl"
+          dir="rtl"
+          scrollAmount={0.7}
+        >
+          <Products items={items} gap={1} className="shrink-0 pr-6" />
+        </HorizontalSlider>
       </div>
     </div>
   )

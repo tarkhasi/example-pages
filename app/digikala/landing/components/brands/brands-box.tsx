@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button"
 import { ChevronLeftIcon, SparklesIcon } from "lucide-react"
 import Link from "next/link"
 import Brands from "@/app/digikala/landing/components/brands/brands"
+import HorizontalSlider from "@/components/horizontal-slider"
 
 export function BrandsBox({
   title,
@@ -26,13 +27,12 @@ export function BrandsBox({
             <span className="text-[20px] font-bold">{title}</span>
           </div>
         </div>
-
       </div>
 
       {/* Products */}
-      <Brands items={items}>
-        <div className="pr-5"></div>
-      </Brands>
+      <HorizontalSlider dir="rtl" scrollAmount={0.7} arrowSize="md">
+        <Brands items={items} className="pr-6"/>
+      </HorizontalSlider>
     </div>
   )
 }

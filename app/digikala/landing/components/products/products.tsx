@@ -10,23 +10,23 @@ export default function Products({
   grid = false,
   gap = null,
   children,
-  scrollRef,
+  className,
 }: Readonly<{
   items: any
   border?: boolean
   grid?: boolean
   gap?: number | string | null
+  className?: string
   children?: React.ReactNode
-  scrollRef?: React.RefObject<HTMLDivElement | null>
 }>) {
-  if (!Array.isArray(items) || items.length === 0) return <div />
+  if (!Array.isArray(items) || items.length === 0) return null
 
   const list = items.map((i: any) => (
     <div
       key={i?.id}
       className={
         !grid
-          ? "flex items-stretch"
+          ? "flex shrink-0 items-stretch"
           : "flex w-full items-center justify-center border border-gray-100"
       }
       style={!grid ? { minWidth: "154px", width: "164px" } : {}}
@@ -37,17 +37,14 @@ export default function Products({
 
   return (
     <div
-      ref={scrollRef}
-      className={cn(
-        "scrollbar-hide overflow-hidden rounded-r-md",
-        !grid && "overflow-x-auto"
-      )}
+      className={cn("w-full min-w-0 rounded-r-md", className)}
     >
       <div
         className={cn(
           grid
             ? "grid w-full grid-cols-4 items-stretch justify-items-center"
-            : `flex w-max items-stretch gap-${gap ?? "3"}`
+            : "flex w-max min-w-full items-stretch",
+          !grid && `gap-${gap ?? "3"}`
         )}
       >
         {children}
