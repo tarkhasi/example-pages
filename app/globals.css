@@ -141,3 +141,10 @@ button{
         display: none;
     }
 }
+
+@utility f-* {
+    font-size: calc(--value(integer) * 1px) !important;
+}
+.text-body-2 {
+    font-size: 12px !important;
+}
